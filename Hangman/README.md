@@ -1,2 +1,2 @@
-Guessing Word Game.
-Usage: java game.java
+# Guessing Word Game.<br/>
+Usage: ```java game.java```
