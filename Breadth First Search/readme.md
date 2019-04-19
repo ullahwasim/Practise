@@ -1,4 +1,5 @@
-Breath First Search Algorithm
-Usage:
-Goto Breath First Search and then type javac ai/*java
-then java ai/AI 
+Breadth First Search Algorithm
+Usage:<br/>
+Goto Breadth First Search Folder and then <br/>
+```javac ai/*.java```<br/>
+ ```java ai/AI ```<br/>
