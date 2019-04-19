@@ -1,4 +1,4 @@
-Breadth First Search Algorithm
+Breadth First Search Algorithm<br/>
 Usage:<br/>
 Goto Breadth First Search Folder and then <br/>
 ```javac ai/*.java```<br/>
