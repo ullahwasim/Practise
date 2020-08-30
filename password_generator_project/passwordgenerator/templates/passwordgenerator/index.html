@@ -1,0 +1,22 @@
+{% extends 'passwordgenerator/header.html' %}
+
+{% block content %}
+
+<h2>Password Generator</h2>
+<form method="get" action='{% url "password" %}'>
+
+    <select name="length">
+        <option value="11">11</option>
+        <option value="12">12</option>
+        <option value="13" selected>13</option>
+        <option value="14">14</option>
+        <option value="15">15</option>
+        <option value="16">16</option>
+    </select> Length<br>
+    <input type="checkbox" name="uppercase"/>Upper Characters<br>
+    <input type="checkbox" name="specail"/>Special Characters<br>
+    <input type="submit" value="Generate Password"/>
+
+</form>
+
+{% endblock %}
