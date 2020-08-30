@@ -1,0 +1,17 @@
+{% extends 'personal_portfolio/header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+        {% block content %}
+        <div class="container text-center">
+            <b>{{ blog.title }}</b> - {{ blog.date }}<br>
+            {{ blog.description}}<br>
+        </div>
+        {% endblock %}
+</body>
+</html>

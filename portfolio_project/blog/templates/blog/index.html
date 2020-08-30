@@ -1,0 +1,19 @@
+{% extends 'personal_portfolio/header.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+</head>
+<body>
+    {% block content %}
+    <div class="container text-center">
+    {% for blog in blogs %}
+    <b><a href="{% url 'blog:detail' blog.id %}">{{ blog.title }}</a></b> - {{ blog.date|date:"d M Y" }}<br>
+    {{ blog.description|truncatechars:40 }}<br>
+    {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>
