@@ -1,0 +1,18 @@
+{% extends 'todo/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+{% for todo in todos %}
+<a href="{% url 'viewtodo' todo.id %}"><b>{{ todo.title }}</b></a> - {{ todo.created }}<br>
+{% if todo.memo%}
+{{ todo.memo }}<br>
+{% endif %}
+{% endfor %}
+{% endblock %}
+</body>
+</html>

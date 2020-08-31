@@ -1,0 +1,28 @@
+{% extends 'todo/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+</head>
+<body>
+{% block content %}
+{% if error %}
+{{ error }}
+{% endif %}
+<!--{{form}}-->
+<form method="POST">
+                    {% csrf_token %}
+                    <label for="username">Username:</label><br>
+                    <input type="text" name="username" id="username">
+                    Your username must be unique. We'll let you know if someone has taken it already.<br>
+
+                    <label for="password1">Password:</label><br>
+                    <input type="password" name="password1" id="password1"><br>
+                    <label for="password2">Confirm Password:</label><br>
+                    <input type="password" name="password2" id="password2"><br>
+                    <button type="submit" class="btn btn-primary">Sign Up</button>
+</form>
+{% endblock %}
+</body>
+</html>

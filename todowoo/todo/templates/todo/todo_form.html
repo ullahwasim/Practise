@@ -1,0 +1,44 @@
+{% load bootstrap4 %}
+<h1>
+  {% if not form.instance.pk %}
+  Create School
+  {% else %}
+  Update School
+  {% endif %}
+</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" class='btn btn-primary' value="Submit">
+
+  </form>
+
+<h1>
+  {% if not form.instance.pk %}
+  Create School
+  {% else %}
+  Update School
+  {% endif %}
+</h1>
+  <form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class='btn btn-primary' value="Submit">
+
+  </form>
+
+
+<h1>
+  {% if not form.instance.pk %}
+  Create School
+  {% else %}
+  Update School
+  {% endif %}
+</h1>
+  <form method="POST" class="form">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {% endbuttons %}
+  </form>

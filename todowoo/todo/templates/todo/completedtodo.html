@@ -1,0 +1,19 @@
+{% extends 'todo/header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block content %}
+{% for todo in todos %}
+<b>{{ todo.title }}</b> - {{ todo.created }}<br>
+{% if todo.memo%}
+{{ todo.memo }}<br>
+{{ todo.datecompleted }}
+{% endif %}
+{% endfor %}
+{% endblock %}
+</body>
+</html>
